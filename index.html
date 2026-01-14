@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neko Haven - Extreme Relaxation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header id="header">
+    <nav class="container">
+      <a href="#" class="logo">Neko Haven</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#cast">Cast</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#access">Access</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero">
+      <div class="hero-content fade-in">
+        <h1>都会の喧騒を忘れ、<br>極上の癒やしを。</h1>
+        <p>Premium Cat Cafe Experience</p>
+        <a href="#access" class="btn-primary">Visit Us</a>
+      </div>
+      <div class="hero-overlay"></div>
+      <img src="./assets/hero.png" alt="Interior of Neko Haven" class="hero-bg">
+    </section>
+
+    <section id="about" class="section">
+      <div class="container fade-in-section">
+        <h2 class="section-title">Our Philosophy</h2>
+        <p class="section-desc">
+          Neko Havenは、ただの猫カフェではありません。<br>
+          ここは、忙しい現代人のための隠れ家。<br>
+          最高級のインテリア、厳選されたコーヒー、そして気品あふれる猫たち。<br>
+          ゆったりと流れる時間の中で、心安らぐひとときをお過ごしください。
+        </p>
+      </div>
+    </section>
+
+    <section id="cast" class="section">
+      <div class="container">
+        <h2 class="section-title fade-in-section">Our Cast</h2>
+        <div class="cast-grid">
+          <div class="cast-card fade-in-section">
+            <div class="cast-image">
+              <img src="./assets/cat1.png" alt="Luna">
+            </div>
+            <div class="cast-info">
+              <h3>Luna</h3>
+              <p>Persian / F / 3yo</p>
+              <p class="cast-bio">雪のような毛並みを持つ、気高い女王様。静かな時間を愛しています。</p>
+            </div>
+          </div>
+          <div class="cast-card fade-in-section" style="transition-delay: 0.2s;">
+            <div class="cast-image">
+              <img src="./assets/cat2.png" alt="Milo">
+            </div>
+            <div class="cast-info">
+              <h3>Milo</h3>
+              <p>Scottish Fold / M / 1yo</p>
+              <p class="cast-bio">好奇心旺盛な遊び好き。テーブルの陰からあなたを見つめているかも。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="section">
+      <div class="container fade-in-section">
+        <h2 class="section-title">Menu</h2>
+        <div class="menu-list">
+          <div class="menu-item">
+            <span class="menu-name">Premium Blend Coffee</span>
+            <span class="menu-price">¥1,200</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-name">Royal Milk Tea</span>
+            <span class="menu-price">¥1,300</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-name">Seasonal Textarts</span>
+            <span class="menu-price">¥900</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-name">Homemade Scones</span>
+            <span class="menu-price">¥800</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="access" class="section">
+      <div class="container fade-in-section">
+        <h2 class="section-title">Access</h2>
+        <div class="access-info">
+          <p>〒107-0062 東京都港区南青山 5-5-5</p>
+          <p>Open: 11:00 - 20:00 (L.O. 19:30)</p>
+          <p>Tel: 03-1234-5678</p>
+          <!-- Map placeholder -->
+          <div class="map-placeholder">
+            <p>Google Map</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Neko Haven. All rights reserved.</p>
+  </footer>
+
+  <script src="./main.js"></script>
+</body>
+
+</html>
