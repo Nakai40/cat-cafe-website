@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Cats - Neko Haven</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header id="header">
+        <nav class="container">
+            <a href="index.html" class="logo">Neko Haven</a>
+            <ul class="nav-links">
+                <li><a href="index.html#about">コンセプト</a></li>
+                <li><a href="friends.html" class="active">ねこのお友達</a></li>
+                <li><a href="index.html#system">料金</a></li>
+                <li><a href="index.html#menu">メニュー</a></li>
+                <li><a href="index.html#access">アクセス</a></li>
+                <li><a href="./rules.html">お約束</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="hero-content fade-in">
+                <h1>ねこのお友達</h1>
+                <p>Our Lovely Casts</p>
+            </div>
+            <div class="hero-overlay"></div>
+            <img src="./assets/hero.png" alt="Cats" class="hero-bg">
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <p class="section-desc fade-in-section">
+                    個性豊かな猫たちが、皆様のご来店をお待ちしております。<br>
+                    お気に入りの子を見つけて、素敵な時間をお過ごしください。
+                </p>
+
+                <div class="cast-grid">
+                    <!-- Cat 1 -->
+                    <div class="cast-card fade-in-section">
+                        <div class="cast-image">
+                            <img src="./assets/cat1.png" alt="Luna">
+                        </div>
+                        <div class="cast-info">
+                            <h3>Luna</h3>
+                            <p>Persian / F / 3yo</p>
+                            <p class="cast-bio">雪のような毛並みを持つ、気高い女王様。静かな時間を愛しています。</p>
+                        </div>
+                    </div>
+                    <!-- Cat 2 -->
+                    <div class="cast-card fade-in-section" style="transition-delay: 0.1s;">
+                        <div class="cast-image">
+                            <img src="./assets/cat2.png" alt="Milo">
+                        </div>
+                        <div class="cast-info">
+                            <h3>Milo</h3>
+                            <p>Scottish Fold / M / 1yo</p>
+                            <p class="cast-bio">好奇心旺盛な遊び好き。テーブルの陰からあなたを見つめているかも。</p>
+                        </div>
+                    </div>
+                    <!-- Cat 3 -->
+                    <div class="cast-card fade-in-section" style="transition-delay: 0.2s;">
+                        <div class="cast-image">
+                            <img src="./assets/cat3.png" alt="Bella">
+                        </div>
+                        <div class="cast-info">
+                            <h3>Bella</h3>
+                            <p>Ragdoll / F / 2yo</p>
+                            <p class="cast-bio">透き通るような青い瞳と、シルクのような手触り。抱っこが大好き。</p>
+                        </div>
+                    </div>
+                    <!-- Cat 4 -->
+                    <div class="cast-card fade-in-section">
+                        <div class="cast-image">
+                            <img src="./assets/cat4.png" alt="Leo">
+                        </div>
+                        <div class="cast-info">
+                            <h3>Leo</h3>
+                            <p>Maine Coon / M / 4yo</p>
+                            <p class="cast-bio">森の王者のような風格。大きな体で優しくあなたを見守ります。</p>
+                        </div>
+                    </div>
+                    <!-- Cat 5 -->
+                    <div class="cast-card fade-in-section" style="transition-delay: 0.1s;">
+                        <div class="cast-image">
+                            <img src="./assets/cat5.png" alt="Coco">
+                        </div>
+                        <div class="cast-info">
+                            <h3>Coco</h3>
+                            <p>British Shorthair / F / 2yo</p>
+                            <p class="cast-bio">落ち着いたグレーの毛並み。日向ぼっこが日課のマイペース屋さん。</p>
+                        </div>
+                    </div>
+                    <!-- Cat 6 -->
+                    <div class="cast-card fade-in-section" style="transition-delay: 0.2s;">
+                        <div class="cast-image">
+                            <img src="./assets/cat6.png" alt="Daisy">
+                        </div>
+                        <div class="cast-info">
+                            <h3>Daisy</h3>
+                            <p>Munchkin / F / 1yo</p>
+                            <p class="cast-bio">短い足でちょこちょこ歩く姿が人気。元気いっぱいの末っ子キャラ。</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Neko Haven. All rights reserved.</p>
+    </footer>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
