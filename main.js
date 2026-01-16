@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
-            
+
             // Adjust offset for header height if needed
             // const headerOffset = 80;
             // const elementPosition = target.getBoundingClientRect().top;
@@ -65,4 +65,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+    // Hero Slider
+    const slides = document.querySelectorAll('.hero-slide');
+    let currentSlide = 0;
+    const slideInterval = 5000;
+
+    if (slides.length > 0) {
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, slideInterval);
+    }
 });
