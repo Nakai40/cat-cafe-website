@@ -94,10 +94,13 @@ header .container {
 }
 
 .logo {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #fff;
-  transition: color 0.4s;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
 }
 
 .nav-links {
@@ -240,6 +243,10 @@ header .container {
 /* Sections */
 .section {
   padding: 8rem 0;
+}
+
+.section-gray {
+  background-color: #f5f5f5;
 }
 
 .section-title {
@@ -663,5 +670,87 @@ footer {
 
   .rules-content>ol>li>strong::before {
     font-size: 2rem;
+  }
+}
+
+/* How to Enjoy Page */
+.enjoy-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.enjoy-item {
+  display: flex;
+  align-items: center;
+}
+
+.enjoy-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.enjoy-image {
+  flex: 1;
+  width: 50%;
+  height: 400px;
+  position: relative;
+}
+
+.enjoy-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.enjoy-content {
+  flex: 0.8;
+  background: #fff;
+  padding: 3rem;
+  margin-left: -80px;
+  z-index: 10;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  border-radius: 2px;
+  position: relative;
+}
+
+.enjoy-item:nth-child(even) .enjoy-content {
+  margin-left: 0;
+  margin-right: -80px;
+}
+
+.enjoy-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-text);
+  border-bottom: 2px solid var(--color-secondary);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.enjoy-content p {
+  line-height: 2;
+  color: var(--color-text);
+}
+
+@media (max-width: 900px) {
+
+  .enjoy-item,
+  .enjoy-item:nth-child(even) {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .enjoy-image {
+    width: 100%;
+    height: 300px;
+  }
+
+  .enjoy-content,
+  .enjoy-item:nth-child(even) .enjoy-content {
+    width: 90%;
+    margin: -50px auto 0;
+    padding: 2rem;
   }
 }
