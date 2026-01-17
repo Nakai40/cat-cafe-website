@@ -479,6 +479,11 @@ footer {
   transform: translateY(0);
 }
 
+/* Hamburger Menu - Hidden on Desktop */
+.hamburger {
+  display: none;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .hero-content h1 {
@@ -518,7 +523,6 @@ footer {
     position: relative;
     cursor: pointer;
     z-index: 1001;
-    /* Ensure it's above the overlay */
   }
 
   .hamburger span {
@@ -526,7 +530,7 @@ footer {
     width: 100%;
     height: 2px;
     background-color: #fff;
-    transition: 0.3s;
+    transition: all 0.3s ease-in-out;
   }
 
   .hamburger span:nth-child(1) {
@@ -542,7 +546,17 @@ footer {
     bottom: 0;
   }
 
-  /* Hamburger Active State */
+  /* Hamburger Active State - X形状 */
+  .hamburger.active span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    background-color: var(--color-text);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
   .hamburger.active span:nth-child(3) {
     bottom: 50%;
     transform: translateY(50%) rotate(-45deg);

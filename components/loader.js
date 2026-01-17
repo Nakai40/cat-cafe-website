@@ -113,14 +113,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // ヘッダーのスクロール効果を設定
     setupHeaderScroll();
 
-    // ハンバーガーメニューのイベントリスナーを再設定
+    // ハンバーガーメニューのイベントリスナーを設定
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
+    const navLinksItems = document.querySelectorAll('.nav-links li a');
 
     if (hamburger && navLinks) {
+        // ハンバーガーメニューのクリックイベント
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             hamburger.classList.toggle('active');
+        });
+
+        // メニューリンクをクリックしたときにメニューを閉じる
+        navLinksItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
         });
     }
 });
