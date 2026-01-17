@@ -236,7 +236,8 @@ header .container {
 }
 
 .btn-dark:hover {
-  background-color: var(--color-text);
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
   color: #fff;
 }
 
