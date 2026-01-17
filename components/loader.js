@@ -1,17 +1,37 @@
+// ヘッダーのHTMLコンテンツ
+const headerHTML = `
+<header id="header">
+    <nav class="container">
+        <a href="./index.html" class="logo"><img src="./assets/logo.svg" alt="もこもこテラス"></a>
+        <ul class="nav-links">
+            <li><a href="./friends.html">ねこのお友達</a></li>
+            <li><a href="./how_to_enjoy.html">過ごし方</a></li>
+            <li><a href="./index.html#system">料金</a></li>
+            <li><a href="./index.html#menu">メニュー</a></li>
+            <li><a href="./index.html#access">アクセス</a></li>
+            <li><a href="./rules.html">お約束</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+</header>
+`;
+
+// フッターのHTMLコンテンツ
+const footerHTML = `
+<footer>
+    <p>&copy; 2024 Moko Moko Terrace. All rights reserved.</p>
+</footer>
+`;
+
 // 共通コンポーネントを読み込む関数
-async function loadComponent(elementId, componentPath) {
-    try {
-        const response = await fetch(componentPath);
-        if (!response.ok) {
-            throw new Error(`Failed to load ${componentPath}: ${response.status}`);
-        }
-        const html = await response.text();
-        const element = document.getElementById(elementId);
-        if (element) {
-            element.outerHTML = html;
-        }
-    } catch (error) {
-        console.error('Error loading component:', error);
+function loadComponent(elementId, htmlContent) {
+    const element = document.getElementById(elementId);
+    if (element) {
+        element.outerHTML = htmlContent;
     }
 }
 
@@ -38,10 +58,10 @@ function setupHeaderScroll() {
 }
 
 // DOMが読み込まれたら実行
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener('DOMContentLoaded', () => {
     // ヘッダーとフッターを読み込む
-    await loadComponent('header-placeholder', './components/header.html');
-    await loadComponent('footer-placeholder', './components/footer.html');
+    loadComponent('header-placeholder', headerHTML);
+    loadComponent('footer-placeholder', footerHTML);
 
     // ヘッダーのスクロール効果を設定
     setupHeaderScroll();
